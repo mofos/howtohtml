@@ -1,144 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWT Project</title>
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-        body {
-            background-color: grey;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            margin: 0 15%; 
-            background-color: white;
-            padding: 20px;
-            height: 100%;
-        }
-        .container h1 {
-            padding: 40px 0;
-            font-size: 3em;
-        }
-        .topic{
-            margin: 20px 0;
-            background-color: rgba(146, 248, 255, 0.336);
-            padding: 10px;
-        }
-        .topic h2 {
-            font-size: 2em;
-        }
-        .activitySection {
-            margin: 30px 0;
-            text-align: center;
-        }
-        .activitySection button {
-            margin: 30px;
-            font-size: 1.5em;
-        }
-        .textArea {
-            display: block;
-            margin: 0px auto;
-            width: 500px;
-            height: 200px;
-            background-color: rgb(22, 26, 53);
-            color: aquamarine;
-            font-size: 2em;
-        }
-        #codeButton {
-            height: auto;
-            min-height: 100px;
-            background-color: white;
-            margin: 0 50px;
-            border:rgb(22, 26, 53) 1px solid;
-            border-radius: 5px;
-            padding: auto;
-            text-align: center;
-        }
-        .example{
-            margin: 20px;
-        }
-        .example .runButton {
-            margin: 0px;
-            font-size: 1em;
-            color: white;
-            padding: 8px 20px;
-            border-radius: 5px;
-            background: rgb(5, 187, 36);
-        }
-        #result {
-            margin: 10px;
-            font-size: 1.5em;
-        }
 
-    </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mainpage</title>
+
+  <link rel="stylesheet" href="CSS/index.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
 </head>
-<body>
-    <div class="container">
-        <h1>HTML in One Day.</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat error, deleniti commodi iste voluptate magni accusamus ipsum itaque, ex a, obcaecati atque minima id rem mollitia laudantium repudiandae? Excepturi, sint!</p>
-        <section class="topic">
-            <h2>The Button Tag</h2>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam est, veniam facere ducimus labore repellendus? Fuga doloribus dolores harum non quia beatae, dolorum modi, est sed placeat eaque officia id.</p>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam est, veniam facere ducimus labore repellendus? Fuga doloribus dolores harum non quia beatae, dolorum modi, est sed placeat eaque officia id.</p>
-            <br>
-            <p>Quisquam est, veniam facere ducimus labore repellendus? Fuga doloribus dolores harum non quia beatae, dolorum modi, est sed placeat eaque officia id.</p>
-            <div class="activitySection">
-                <h2>Try writing the code for the button below!</h1>
-                <button>My button</button>
-                <div class="example">
-                    <textarea class="textArea" id="1"></textarea>
-                    <button class="runButton" onclick="renderHTML(1)">Run Code</button>
-                    <div id="result"></div>
-                </div>
-                <div id="codeButton">
-                </div>
-            </div>
-        </section>
-        <section class="topic">
-            <h2>The Button Tag</h2>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam est, veniam facere ducimus labore repellendus? Fuga doloribus dolores harum non quia beatae, dolorum modi, est sed placeat eaque officia id.</p>
-            <br>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam est, veniam facere ducimus labore repellendus? Fuga doloribus dolores harum non quia beatae, dolorum modi, est sed placeat eaque officia id.</p>
-            <br>
-            <p>Quisquam est, veniam facere ducimus labore repellendus? Fuga doloribus dolores harum non quia beatae, dolorum modi, est sed placeat eaque officia id.</p>
-            <div class="activitySection">
-                <h2>Try writing the code for the button below!</h1>
-                <button>My button</button>
-                <div class="example">
-                    <textarea class="textArea" id="1"></textarea>
-                    <button class="runButton" onclick="renderHTML(1)">Run Code</button>
-                    <div id="result"></div>
-                </div>
-                <div id="codeButton">
-                </div>
-            </div>
-        </section>
+
+<body style="background-color:rgb(199, 160, 61);">
+  <header>
+    <div class="navContainer">
+      <h1>CLUB88</h1>
+      <nav>
+        <ul>
+          <li><a href="#">AboutUs</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Profile</a></li>
+        </ul>
+      </nav>
     </div>
-    <script>
-        renderHTML = (id) => {
-            const textArea = document.getElementById(id);
-            const target = document.getElementById('codeButton');
-            const result = document.getElementById('result');
-            const code = textArea.value;
-            console.log(code);
-            if(code == "<button>My Button</button>")  {
-                result.innerHTML = "Correct!";
-                result.style = "color: green";
-            } else {
-                result.innerHTML = "Wrong!";
-                result.style = "color: red";
-            }
-            target.innerHTML = code;
-        }
-    </script>
+
+    <div class="hero">
+      <div class="left">
+        <img src="./imgs/4.png" alt="">
+      </div>
+
+      <div class="right">
+        <h6>CLUB88<br></h6>
+        <h1>Qualite<span>Superieure</span></h1><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur doloribus ratione eveniet
+          ea suscipit fugiat id nam in laudantium eius dolores officiis iure sunt odio maiores quos ad,
+          voluptas sint!</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="ceo">
+    <div class="container-ceo">
+      <div class="ceo-img">
+        <img src="./imgs/ceo.jpg" alt="">
+      </div>
+
+      <div class="ceo-right">
+        <h1>CEO</h1><br>
+        <h3>Hello I am ceo</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+          illum quaerat at dolorem sit iusto rerum accusamus, doloribus neque voluptatem expedita
+          voluptates. Natus ipsam fugit aperiam nemo veniam dicta consequuntur.</p>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+          illum quaerat at dolorem sit iusto rerum accusamus, doloribus neque voluptatem expedita
+          voluptates. Natus ipsam fugit aperiam nemo veniam dicta consequuntur.</p>
+      </div>
+    </div>
+
+  </section>
+
 </body>
+
 </html>
